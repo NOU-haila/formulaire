@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+
+
+    <title>Formulaire</title>
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #817a7a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #2fc834;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+       
+        input:invalid {
+            border: 1px solid #ff0000;
+        }
+        
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+        }
+        
+    </style>
+    <div class="container">
+    
+        <form id="inscriptionForm"  onsubmit="valideForm() ;return false;">
+           
+            <div class="input-field">
+              <label for="nom">Nom:</label><br>
+                <input type="text" id="nom" name="nom" required>
+                
+
+               
+            </div>
+           
+            <div class="input-field">
+              <label for="prenom">Prénom:</label><br>
+                <input type="text" id="prenom" name="prenom" required>
+               
+
+
+                
+            </div>
+            <div class="input-field">
+              <label for="date_naissance">Date de naissance:</label><br>
+              <input type="date" id="date_naissance" name="date_naissance" required>
+              
+
+          </div>
+          <p>
+            <label>
+              <label for="sexe">sexe:</label>
+                <input type="radio" name="sexe" value="Homme" required>
+                
+                <span>Homme</span>
+            </label>
+            <label>
+                <input type="radio" name="sexe" value="Femme" required>
+                <span>Femme</span>
+            </label>
+        </p>
+  
+          <div class="input-field">
+            <label for="classe">Classe:</label>
+            <input type="radio" name="classe" value="RSI"required>
+            <span>RSI</span>
+          </label>
+          <label>
+            <input type="radio" name="classe" value="DSI" required>
+            <span>DSI</span>
+          </label>
+          </div>
+          <div class="input-field">
+            <label for="langage">langage:</label>
+            <select id="langage" name="langage" >
+                <option value="" >Choisissez votre langage preferer</option>
+                <option value="">C</option>
+                <option value="">JAVA</option>
+                <option value="">PYTHON</option>
+                <option value="">PHP</option>
+            </select>
+          </div>
+           
+            <input type="submit" value="s'inscrire">
+</form>
+        </div>
+
+
+</body>
+</html>
